@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arlene van Neel | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Sticky Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav ul li {
+      list-style: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ff6f61; /* Hover color */
+    }
+
+    /* Animated Buttons (for links) */
+    .contact-box a {
+      display: inline-block;
+      margin: 0.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .contact-box a:hover {
+      background-color: #ff6f61;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Arlene van Neel</h1>
+      <p>Frontend Developer • Creative Thinker • Problem Solver</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about animate-on-scroll fade-in" id="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I’m a passionate developer who believes in clean code, strong coffee, and empowering others through tech. With a background in software engineering and a creative edge, I turn ideas into engaging digital experiences.</p>
+    </div>
+    <img src="images/plant.jpg" alt="Work desk with plant and laptop" />
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects animate-on-scroll fade-in" id="projects">
+    <img src="images/code.jpg" alt="Laptop with code on screen" />
+    <div class="projects-text">
+      <h2>Projects</h2>
+      <p>Here’s a look at some of my recent work. From responsive web apps to intuitive interfaces, I focus on creating solutions that are both functional and beautiful.</p>
+    </div>
+  </section>
+
+  <!-- ABSTRACT -->
+  <section class="abstract animate-on-scroll fade-in">
+    <h2>Design Meets Function</h2>
+    <p>“The details are not the details. They make the design.” – Charles Eames</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact animate-on-scroll fade-in" id="contact">
+    <div class="contact-box">
+      <h2>Let's Connect</h2>
+      <p><a href="mailto:arlenevanneel@gmail.com">arlenevanneel@gmail.com</a></p>
+      <p><a href="https://linkedin.com/in/arlenevn" target="_blank">LinkedIn Profile</a></p>
+    </div>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
