@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arlene van Neel | Portfolio</title>
+  <link rel="preload" as="image" href="Images/hero.jpg" />
+  <link rel="preload" as="image" href="Images/phone.jpg" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -64,6 +66,7 @@
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#offering">Offering</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -82,15 +85,35 @@
       <h2>About Me</h2>
       <p>I’m a passionate developer who believes in clean code, strong coffee, and empowering others through tech. With a background in software engineering and a creative edge, I turn ideas into engaging digital experiences.</p>
     </div>
-    <img src="Images/plant.jpg" alt="Work desk with plant and laptop" />
+    <img src="Images/plant.jpg" width="600" height="400" loading="lazy" alt="Work desk with plant and laptop" />
   </section>
 
   <!-- PROJECTS -->
   <section class="projects animate-on-scroll fade-in" id="projects">
-    <img src="Images/code.jpg" alt="Laptop with code on screen" />
+    <img src="Images/code.jpg" width="600" height="400" loading="lazy" alt="Laptop with code on screen" />
     <div class="projects-text">
       <h2>Projects</h2>
       <p>Here’s a look at some of my recent work. From responsive web apps to intuitive interfaces, I focus on creating solutions that are both functional and beautiful.</p>
+    </div>
+  </section>
+
+    <!-- OFFERING -->
+  <section class="offering animate-on-scroll fade-in" id="offering">
+    <div class="offering-text">
+      <h2>Business Website Services</h2>
+      <p>I help small businesses establish a powerful online presence through clean, modern websites that are fast, mobile-friendly, and easy to maintain. Whether you're starting fresh or need support managing an existing site, I’ve got you covered.</p>
+      <ul>
+        <li>✓ Custom website development</li>
+        <li>✓ Ongoing maintenance & updates</li>
+        <li>✓ Mobile-first responsive design</li>
+        <li>✓ Hosting & domain setup support</li>
+      </ul>
+      <p>Check out some of the websites I’ve built or currently manage below.</p>
+      <div class="project-links">
+        <a href="https://yourfirstprojectlink.com" target="_blank">Project 1</a>
+        <a href="https://yoursecondprojectlink.com" target="_blank">Project 2</a>
+        <!-- Add more as needed -->
+      </div>
     </div>
   </section>
 
